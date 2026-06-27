@@ -350,10 +350,11 @@ tailwind.config = {
         </a>
         <p class="mt-4 text-center text-sm text-inksoft/70">Risposta in giornata · Sopralluogo senza impegno</p>
       </div>
-      <div class="mt-5 rounded-2xl overflow-hidden border border-linea">
-        <iframe title="Mappa Brissago" class="w-full h-56" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=8.7900%2C46.1130%2C8.8300%2C46.1330&layer=mapnik&marker=46.1228%2C8.8090"></iframe>
-      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Costa+di+Mezzo+112B+6614+Brissago" target="_blank" rel="noopener"
+         class="group mt-5 block rounded-2xl overflow-hidden border border-linea relative">
+        <img src="img/mappa.png" alt="Mappa: Hohl Impresa di pittura, Via Costa di Mezzo 112B, Brissago" class="w-full h-56 object-cover">
+        <span class="absolute bottom-3 right-3 bg-calce/95 text-ink text-xs font-semibold px-3 py-1.5 rounded-full shadow group-hover:bg-cotto group-hover:text-calce transition">Apri in Maps →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -407,7 +408,7 @@ tailwind.config = {
     "addressRegion": "Ticino",
     "addressCountry": "CH"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 46.1228, "longitude": 8.8090 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.1186, "longitude": 8.7095 },
   "areaServed": ["Brissago","Ascona","Locarno","Ronco sopra Ascona","Gambarogno","Tenero","Gordola","Vallemaggia","Valle Verzasca"],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "9" },
   "openingHoursSpecification": [
