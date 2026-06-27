@@ -427,14 +427,21 @@ tailwind.config = {
 }
 </script>
 <script>
-  // мягкое появление при скролле
+  // мягкое появление при скролле — с надёжными фолбэками (контент не должен остаться невидимым)
+  const reveals = [...document.querySelectorAll('.reveal')];
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach((el, i) => {
+  reveals.forEach((el, i) => {
     el.style.transitionDelay = (Math.min(i % 6, 4) * 70) + 'ms';
     io.observe(el);
   });
+  // мгновенно показать всё, что над сгибом (надёжно и для рендера, и для пользователя)
+  requestAnimationFrame(() => {
+    reveals.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.98) el.classList.add('in'); });
+  });
+  // жёсткая страховка: что бы ни случилось с observer — через 2.2с всё видно
+  setTimeout(() => reveals.forEach(el => el.classList.add('in')), 2200);
 </script>
 </body>
 </html>
