@@ -32,7 +32,7 @@ tailwind.config = {
   .font-display { font-optical-sizing: auto; }
   /* скрим под текстом героя */
   .hero-scrim { background: linear-gradient(96deg, rgba(28,24,18,.82) 0%, rgba(28,24,18,.66) 34%, rgba(28,24,18,.30) 60%, rgba(28,24,18,0) 82%); }
-  @media (max-width: 768px){ .hero-scrim { background: linear-gradient(180deg, rgba(28,24,18,.78) 0%, rgba(28,24,18,.50) 42%, rgba(28,24,18,.66) 100%); } }
+  @media (max-width: 768px){ .hero-scrim { background: linear-gradient(178deg, rgba(28,24,18,.88) 0%, rgba(28,24,18,.74) 30%, rgba(28,24,18,.62) 58%, rgba(28,24,18,.74) 100%); } }
   /* мягкое появление */
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1); }
   .reveal.in { opacity: 1; transform: none; }
@@ -86,19 +86,19 @@ tailwind.config = {
     <img src="img/hero.png" alt="Interni eleganti tinteggiati con vista sul Lago Maggiore, Brissago" class="absolute inset-0 w-full h-full object-cover object-[60%_45%]">
     <div class="absolute inset-0 hero-scrim"></div>
     <div class="relative z-10 max-w-7xl mx-auto w-full px-6 flex items-center">
-      <div class="max-w-2xl py-16">
-        <p class="reveal text-calce/85 text-[13px] md:text-sm uppercase tracking-[.28em] mb-6 flex items-center gap-3">
+      <div class="max-w-2xl py-10 md:py-16">
+        <p class="reveal text-calce/85 text-[12px] md:text-sm uppercase tracking-[.24em] md:tracking-[.28em] mb-4 md:mb-6 flex items-center gap-3">
           <span class="h-px w-9 bg-cotto inline-block"></span> Brissago · Locarnese · Vallemaggia
         </p>
-        <h1 class="reveal font-display text-[2.7rem] leading-[1.04] sm:text-6xl md:text-[4.2rem] md:leading-[1.02] font-semibold text-calce tracking-[-.01em]">
+        <h1 class="reveal font-display text-[2.35rem] leading-[1.05] sm:text-6xl md:text-[4.2rem] md:leading-[1.02] font-semibold text-calce tracking-[-.01em]">
           Il colore che dà<br><span class="italic text-sabbia">valore</span> alla tua casa.
         </h1>
-        <p class="reveal mt-7 text-base md:text-[19px] leading-relaxed text-calce/85 max-w-xl">
+        <p class="reveal mt-4 md:mt-7 text-[15.5px] md:text-[19px] leading-relaxed text-calce/85 max-w-xl">
           Tinteggiature interne ed esterne, facciate, decorazioni e isolamento termico —
           eseguiti a regola d'arte con <span class="text-calce font-semibold">pitture biologiche</span>,
           da un'unica mano di fiducia.
         </p>
-        <div class="reveal mt-9 flex flex-wrap items-center gap-3.5">
+        <div class="reveal mt-6 md:mt-9 flex flex-wrap items-center gap-3.5">
           <a href="#contatti" class="inline-flex items-center gap-2 bg-cotto hover:bg-cottod text-calce font-semibold px-7 py-3.5 rounded-full transition shadow-lg shadow-black/20">
             Richiedi una consulenza
           </a>
@@ -107,7 +107,7 @@ tailwind.config = {
             079 789 69 66
           </a>
         </div>
-        <div class="reveal mt-10 flex items-center gap-6 text-calce/80 text-sm">
+        <div class="reveal mt-6 md:mt-10 flex items-center gap-4 md:gap-6 text-calce/80 text-[13px] md:text-sm">
           <span class="flex items-center gap-2"><span class="text-cotto text-base tracking-tight">★★★★★</span> 5.0 / 9 recensioni</span>
           <span class="hidden sm:flex items-center gap-2 border-l border-calce/25 pl-6">Pitture biologiche &amp; naturali</span>
         </div>
